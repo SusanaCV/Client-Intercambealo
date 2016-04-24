@@ -8,7 +8,7 @@
  * Controller of the projectApp
  */
 angular.module('projectApp')
-  .controller('UserCtrl', function () {
+  .controller('UserCtrl', function ($scope, Users) {
     $scope.users = Users.query(function() {
       console.log('I am done loading users...');
     }, function(error) {
@@ -21,4 +21,12 @@ angular.module('projectApp')
       Users.delete({'id': id});
       $scope.users = $scope.users.splice(1);
     };
+
+    /*
+    $scope.newProduct = function(id) {
+      debugger;
+      Products.save({'username':username, 'username':password, 'username':firsname});      
+
+    };
+    */
   });

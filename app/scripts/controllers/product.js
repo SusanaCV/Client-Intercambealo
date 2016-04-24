@@ -8,7 +8,7 @@
  * Controller of the projectApp
  */
 angular.module('projectApp')
-  .controller('ProductCtrl', function () {
+  .controller('ProductCtrl', function ($scope, Products) {
     $scope.products = Products.query(function() {
       console.log('I am done loading products...');
     }, function(error) {
@@ -20,5 +20,12 @@ angular.module('projectApp')
       debugger;
       Products.delete({'id': id});
       $scope.products = $scope.products.splice(1);
+    };
+
+    $scope.newProduct = function() {
+      /*alert($scope.name);*/
+
+      Products.save({'name':$scope.name, 'description':$scope.descrip});      
+
     };
   });

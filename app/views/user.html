@@ -1,7 +1,7 @@
-<div class="jumbotron">
+<div class="">
   <h1>List of Users</h1>
 </div>
-<div class="row marketing">
+<div class="row marketing", ng-controller="UserCtrl">
   <table class='table table-striped table-bordered table-hover table-condensed'>
     <thead>
       <tr>
@@ -14,8 +14,13 @@
       <tr ng-repeat="(key, value) in users">
         <td>{{value.username}}</td>
         <td>{{value.firsname}}</td>
-        <td><span ng-click="deleteUser(value.id)" class="glyphicon glyphicon-trash"></span></td>
+        <td><span ng-click="" class="glyphicon glyphicon-pencil"></span>
+        	<span ng-click="deleteUser(value.id)" class="glyphicon glyphicon-trash"></span>
+        </td>
       </tr>
     </tbody>
   </table>
+  <div>
+  	<h3>New user</h3>
+  </div>
 </div>
