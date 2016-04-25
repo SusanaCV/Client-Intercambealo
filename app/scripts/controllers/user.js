@@ -17,16 +17,13 @@ angular.module('projectApp')
 
 
     $scope.deleteUser = function(id) {
-      debugger;
+      
       Users.delete({'id': id});
       $scope.users = $scope.users.splice(1);
     };
 
-    /*
-    $scope.newProduct = function(id) {
-      debugger;
-      Products.save({'username':username, 'username':password, 'username':firsname});      
-
+       $scope.newUser = function() {
+       	alert($scope.username, $scope.password);
+      Users.save({'username':$scope.username, 'firsname':$scope.firsname, 'password':$scope.password});      
     };
-    */
   });

@@ -21,6 +21,16 @@
     </tbody>
   </table>
   <div>
-  	<h3>New user</h3>
+  	<h3>New User</h3>
+  	 	<form ng-submit="newUser()">
+  		<label for="form-control">Username</label>
+        <input type="text" id="username" class="form-control" placeholder="Username" ng-model="username" required>
+    	<label for="form-control">Firstname</label>
+        <input type="text" id="firsname" class="form-control" placeholder="Firstname" ng-model="firsname" required>
+        <label for="form-control">Password</label>
+        <input type="text" id="password" class="form-control" placeholder="Password" ng-model="password" required>
+        <button type="submit" class="btn btn-primary glyphicon glyphicon-floppy-disk"></button>
+          <a ng-href="#">Cancel</a>    	
+  	</form>
   </div>
 </div>
