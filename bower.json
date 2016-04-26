@@ -17,6 +17,7 @@
   },
   "appPath": "app",
   "moduleName": "projectApp",
+  "moduleName": "projectHome",
   "overrides": {
     "bootstrap": {
       "main": [
