@@ -17,6 +17,7 @@ angular.module('projectApp')
     });
 
 
+
     $scope.deleteTransaction = function(id) {
       debugger;
       Transactions.delete({'id': id});
