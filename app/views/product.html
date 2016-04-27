@@ -1,11 +1,12 @@
-<div class="collapse navbar-collapse" id="js-navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li class=""><a href="#/dashboard">Dashboard</a></li>
-              <li><a ng-href="#/dashboard">Transactions</a></li>
-              <li><a ng-href="#/product">Products</a></li>              
-            </ul>
-          </div>
-<div class="">
+<nav class="navbar navbar-default navbar-fixed-top" id="js-navbar-collapse">
+  <ul class="nav navbar-nav">
+    <li class=""><a >Intercámbialo</a></li>
+    <li class=""><a href="#/dashboard">Dashboard</a></li>
+    <li><a ng-href="#/dashboard">Transactions</a></li>
+    <li><a ng-href="#/product">Products</a></li>
+    <li><a ng-href="#/login">Logout</a></li>
+  </ul>
+</nav>
 <div class="">
   <h1>List of Products</h1>
 </div>
@@ -36,7 +37,7 @@
     	<label for="form-control">Descripcion</label>
         <input type="text" id="descrip" class="form-control" placeholder="Description" ng-model="descrip" required>
         <button type="submit" class="btn btn-primary glyphicon glyphicon-floppy-disk"></button>
-          <a ng-href="#">Cancel</a>    	
+        <a ng-href="#/dashboard" class="btn btn-primary glyphicon glyphicon-remove"></a>
   	</form>
   	
   </div>
