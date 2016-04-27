@@ -1,7 +1,8 @@
 <div class="collapse navbar-collapse" id="js-navbar-collapse">
             <ul class="nav navbar-nav">
-              <li class=""><a href="#/">Login</a></li>
-              <li><a ng-href="#/user">New user</a></li>              
+              <li class=""><a href="#/dashboard">Dashboard</a></li>
+              <li><a ng-href="#/dashboard">Transactions</a></li>
+              <li><a ng-href="#/product">Products</a></li>              
             </ul>
           </div>
 <div class="">
@@ -29,6 +30,23 @@
     </tbody>
   </table>
   <div>
+    <h4>New Transaction</h4>
+    <div ng-controller="">
+      <form name="myForm">
+        <label for="mySelect">Your product:</label>
+        <select name="mySelect" id="mySelect"
+          ng-options="option.name for option in data.availableOptions track by option.id"
+          ng-model="data.selectedOption"></select>
+      </form>
+      <form name="myForm">
+        <label for="mySelect">Make a choice:</label>
+        <select name="mySelect" id="mySelect"
+          ng-options="option.name for option in data.availableOptions track by option.id"
+          ng-model="data.selectedOption"></select>
+      </form>
+    </div>
+</div>
+  <div>
   	<!-- /<h3>New Transaction</h3> -->
   	<!-- <form ng-submit="newProduct()"> -->
   		<!-- <label for="form-control">Name</label> -->
@@ -52,31 +70,4 @@
        ga('send', 'pageview');
     </script>
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-messages/angular-messages.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/controllers/user.js"></script>
-        <script src="scripts/controllers/product.js"></script>
-        <script src="scripts/services/products.js"></script>
-        <script src="scripts/services/users.js"></script>
-        <script src="scripts/services/dashboard.js"></script>
-        <script src="scripts/services/login.js"></script>
-        <script src="scripts/controllers/dashboard.js"></script>
-        <script src="scripts/controllers/login.js"></script>
-        <!-- endbuild -->
+    
