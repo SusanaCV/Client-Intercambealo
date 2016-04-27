@@ -17,7 +17,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
+  ])  
   .config(function ($routeProvider) {
     $routeProvider
       .when('/main', {
@@ -40,7 +40,7 @@ angular
         controller: 'ProductCtrl',
         controllerAs: 'product'
       })
-      .when('/', {
+      .when('/dashboard', {
         templateUrl: 'views/dashboard.html',
         controller: 'DashboardCtrl',
         controllerAs: 'dashboard'
@@ -49,6 +49,14 @@ angular
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl',
         controllerAs: 'login'
+      })
+      .when('/', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl',
+        controllerAs: 'login'
+      })
+      .when('/', {
+        templateUrl: 'views/login.html'
       })
       .otherwise({
         redirectTo: '/'
